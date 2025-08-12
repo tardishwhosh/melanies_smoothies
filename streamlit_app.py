@@ -28,8 +28,8 @@ if ingredients_list:
 
 
 
-    my_insert_stmt = f"""INSERT INTO smoothies.public.orders(name_on_order, ingredients, order_filled)
-              VALUES ('{name_on_order}', '{ingredients_string}', 'N')
+    my_insert_stmt = f"""INSERT INTO smoothies.public.orders(name_on_order, ingredients, order_filled, order_ts)
+              VALUES ('{name_on_order}', '{ingredients_string}', FALSE, CURRENT_TIMESTAMP)
                   """
  
     #st.write(my_insert_stmt)
