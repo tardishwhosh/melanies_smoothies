@@ -50,6 +50,4 @@ smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/wa
 
 sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
-cur = conn.cursor()
-cur.execute("SELECT CURRENT_VERSION()")
-print(cur.fetchone())
+
